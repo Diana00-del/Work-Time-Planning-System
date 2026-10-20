@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: chronos-api
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/chronos
+    username: admin
+    password: 1qaz@WSX
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: application
+    open-in-view: false
+  flyway:
+    default-schema: application
+
+auth:
+  rsa-private-key: classpath:app.key
+  rsa-public-key: classpath:app.pub
+  token-expiration-time: 3
+  token-expiration-time-unit: DAYS
+  password-reset-token-expiration-time: 1
+  password-reset-token-expiration-time-unit: DAYS
