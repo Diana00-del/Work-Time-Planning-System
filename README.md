@@ -1,4 +1,4 @@
-# Chronos
+# Work-Time-Planning-System - [Chronos]
 
 **Chronos** is a software project consisting of a backend API and a user interface.
 
